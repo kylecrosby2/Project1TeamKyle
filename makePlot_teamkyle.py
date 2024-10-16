@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the CSV file
-file_path = 'output/test_data_new2.csv'
+file_path = 'output/output_teamkyle.csv'
 data = pd.read_csv(file_path)
 
 # Prepare the data for plotting
