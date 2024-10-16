@@ -11,6 +11,7 @@ def dumb_sat_coins(n, jar, start):
     combinations = [[]]
     found = []
     # Iteratively finds every combination. 
+    done = False
     for coin in jar:
         new_combos = []
         for combo in combinations:
@@ -21,21 +22,23 @@ def dumb_sat_coins(n, jar, start):
             # Breaks and returns if correct combination found
             if sum(new_combos[-1]) == n: 
                 found = new_combos[-1]
+                done = True
                 break     
         combinations += new_combos
+        if done: break
 
-    return found # returns [] if unsatisfiable
+    return found
 
 
 def main():
     # Creates csv to store output
-    file = open("output/output_teamkyle.csv", "w")
+    file = open("output/test_data_new3.csv", "w")
     writer = csv.writer(file)
     writer.writerow(["Number of variables", "Exec Time (microseconds)", "Target", "Combo"])
 
     # Loops through all test files (each has different number of coins in jar)
-    for input_filename in os.listdir("input"):
-        input_file = open(os.path.join("input", input_filename))
+    for input_filename in os.listdir("input5"):
+        input_file = open(os.path.join("input5", input_filename))
         for line in input_file.readlines():
 
             n = int(line.split(',')[1])
