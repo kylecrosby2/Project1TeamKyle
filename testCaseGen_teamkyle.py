@@ -33,7 +33,7 @@ def generate(num_vars, size):
   # Format: [[easy min val, easy max val], [med min, med max], [large min, large max]]
   # testcaseTotalValueRange = [[1e2, 1e3], [1e4, 1e5], [1e6, 1e7]]
 
-  file = open(f"input/{num_vars}_coins.txt", "w")
+  file = open(f"input/data_{num_vars}_coins_teamkyle.txt", "w")
 
   testcaseTotalValueRange = [[0, 100], [100, 1000], [1000, 10000]]
   # convert float values to ints
