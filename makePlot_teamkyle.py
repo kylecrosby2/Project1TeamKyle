@@ -41,7 +41,7 @@ line_x = np.linspace(unsatisfiable['Number of variables'].min(), unsatisfiable['
 line_y = manual_exp(line_x, a, b)
 
 # Plot the manual exponential curve
-plt.ylim(y.min(), y.max())
+plt.ylim(y.min(), 10000)
 plt.plot(line_x, line_y, color='blue', linestyle='--', label=f'Bounding Curve: {a} + {b}*2^x')
 
 # -------------------------
